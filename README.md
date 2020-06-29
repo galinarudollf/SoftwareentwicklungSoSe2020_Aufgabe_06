@@ -36,7 +36,11 @@ Verwenden Sie in der Klasse zum Speichern der Elemente ein  privates Feld vom Ty
 
 Tipps:
   + Für die generische `GetEnumerator`-Methode bietet sich alternativ die `yield return` - Anweisung an.
-  + Die nichtgenerische `IEnumerable.GetEnumerator()`-Methode ist "historisch gewachsen" und wird nicht mehr verwendet, muss aber trotzdem implementiert werden. Im einfachsten Fall delegieren Sie an die generische Version: `System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => GetEnumerator();`
+  + Die nichtgenerische `IEnumerable.GetEnumerator()`-Methode ist "historisch gewachsen" und wird nicht mehr verwendet, muss aber trotzdem implementiert werden. Im einfachsten Fall delegieren Sie an die generische Version:
+  
+```C#
+System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => GetEnumerator();`
+```
 
 Definieren Sie in der Klasse weitere Properties und Methoden, z.B.:
 `Cardinality`, `IsEmpty`, `IsSubsetOf()`, `Intersection()`, `Union()`
