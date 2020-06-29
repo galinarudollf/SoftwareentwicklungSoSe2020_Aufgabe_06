@@ -59,9 +59,9 @@ Die Methode `Suit()` kann z.B. überprüfen, ob die Zahlen eine bestimmte Größ
 ## 3. Delegaten
 Das E-Orakel von Freiberg soll für ein Fußballspiel folgende Voraussagen treffen können:
 
-  +	das Spielergebnis,
+  +	das Spielergebnis
   + ob die Verlängerung (bzw. zwei Verlängerungen) stattfinden werden
-  + die Anzahl der roten Karten für jede Mannschaft.
+  + die Anzahl der roten Karten für jede Mannschaft
 
 Aus organisatorischen Gründen werden die Anfragen erst eingereicht, die Aussagen liefert das Orakel dann zum späteren Zeitpunkt flott nacheinander.
 Erstellen Sie eine Klasse, die für die drei Arten von Voraussagen je eine `static`-Methode definiert. Alle Methoden sollen als Parameter einen String des folgenden Formats bekommen: “Mannschaft1 – Mannschaft2“. Die Methoden haben keinen Rückgabewert, die Voraussagen bzw. Meldungen, dass die Voraussage wegen eines falschen Formats nicht möglich ist, werden innerhalb der jeweiligen Methode auf der Konsole ausgegeben.
@@ -85,7 +85,7 @@ Erstellen Sie ein Programm, das u. a. die Klassen `Mülltonne` und `Müllfahrzeu
 
 Die Klasse Mülltonne enthält
   + die Datenfelder (und evtl. Properties) mit Angaben zu Tonnen-ID, Volumen und Füllstand,
-  + die Methode zum Müllaufnehmen (bzw. ein Property), wo die Überprüfung der Müllmenge und das evtl. Auslösen des Events stattfindet
+  + die Methode zum Müllaufnehmen (bzw. ein Property), wo die Überprüfung der Müllmenge und das evtl. Auslösen des Events stattfindet, sowie
   + das Event (z.B. „Abtransport“).
 
 Verwenden Sie zum Definieren des Events den vorhandenen generischen `EventHandler`-Delegattypen, z.B.
