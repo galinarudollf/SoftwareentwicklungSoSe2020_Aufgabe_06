@@ -86,7 +86,7 @@ Erstellen Sie ein Programm, das u. a. die Klassen `Mülltonne` und `Müllfahrzeu
 Die Klasse Mülltonne enthält
   + die Datenfelder (und evtl. Properties) mit Angaben zu Tonnen-ID, Volumen und Füllstand,
   + die Methode zum Müllaufnehmen (bzw. ein Property), wo die Überprüfung der Müllmenge und das evtl. Auslösen des Events stattfindet, sowie
-  + das Event (z.B. „Abtransport“).
+  + das Event (z.B. `Abtransport`).
 
 Verwenden Sie zum Definieren des Events den vorhandenen generischen `EventHandler`-Delegattypen, z.B.
 ```C#
