@@ -32,7 +32,7 @@ Methoden:
   + `IEnumerator<T> GetEnumerator()` gibt einen Enumerator zurück, der die Collection durchläuft
   + `IEnumerator GetEnumerator()` gibt einen Enumerator zurück, der die Collection durchläuft
 
-Verwenden Sie in der Klasse zum Speichern der Elemente ein private-Datenfeld vom Typ `List<T>`, zum Verwalten von Elementen die angegebenen Methoden bzw. weitere sinnvolle Methoden. Nutzen Sie in den Methoden der Klasse die von der Klasse `List` zur Verfügung stehenden Properties und Methoden: `Count`, `Contains`, `Add`, `CopyTo`, `Remove`. Beachten Sie beim Implementieren der Methoden, dass alle Elemente einer Menge unterschiedlich sein müssen.
+Verwenden Sie in der Klasse zum Speichern der Elemente ein  privates Feld vom Typ `List<T>`, zum Verwalten von Elementen die angegebenen Methoden bzw. weitere sinnvolle Methoden. Nutzen Sie in den Methoden der Klasse die von der Klasse `List` zur Verfügung stehenden Properties und Methoden: `Count`, `Contains`, `Add`, `CopyTo`, `Remove`. Beachten Sie beim Implementieren der Methoden, dass alle Elemente einer Menge unterschiedlich sein müssen.
 
 Tipps:
   + Für die generische `GetEnumerator`-Methode bietet sich die `yield return` - Anweisung an.
