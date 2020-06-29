@@ -35,7 +35,7 @@ Methoden:
 Verwenden Sie in der Klasse zum Speichern der Elemente ein  privates Feld vom Typ `List<T>`, zum Verwalten von Elementen die angegebenen Methoden bzw. weitere sinnvolle Methoden. Nutzen Sie in den Methoden der Klasse die von der Klasse `List` zur Verfügung stehenden Properties und Methoden: `Count`, `Contains`, `Add`, `CopyTo`, `Remove`. Beachten Sie beim Implementieren der Methoden, dass alle Elemente einer Menge unterschiedlich sein müssen.
 
 Tipps:
-  + Für die generische `GetEnumerator`-Methode bietet sich die `yield return` - Anweisung an.
+  + Für die generische `GetEnumerator`-Methode bietet sich alternativ die `yield return` - Anweisung an.
   + Die nichtgenerische `IEnumerable.GetEnumerator()`-Methode ist "historisch gewachsen" und wird nicht mehr verwendet, muss aber trotzdem implementiert werden. Im einfachsten Fall delegieren Sie an die generische Version: `System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => GetEnumerator();`
 
 Definieren Sie in der Klasse weitere Properties und Methoden, z.B.:
