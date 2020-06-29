@@ -1,0 +1,1 @@
+# SoftwareentwicklungSoSe2020_Aufgabe_06
