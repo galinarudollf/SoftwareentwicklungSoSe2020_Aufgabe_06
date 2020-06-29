@@ -6,9 +6,54 @@
 
 ## Idee der Übung
 
-Mit dem Aufgabenblatt sollen Ihre Fähigkeiten beim objektorientierten Entwurf und der Implementierung mittels C# weiter trainiert werden. Der Schwerpunkt liegt dabei auf den Delegaten und dem Event-Konzept.
+Mit dem Aufgabenblatt sollen Ihre Fähigkeiten beim objektorientierten Entwurf auf der Basis 
++ von generischen Klassen und Collections sowie 
++ der Delegaten und dem Event-Konzept
+weiter verbessert werden. 
 
-## 1. Delegaten
+Organisieren Sie Ihre Mini-Projekte jeweils in separaten Ordnern.
+
+## 1. Generische Collections
+Erstellen Sie die generische Klasse Set zum Verwalten von Elementen einer Menge.
+Die Klasse soll Properties und Methoden der Interfaces `ICollection<T>` implementiert:
+
++ `int Count` gibt die Anzahl der Elemente an , die in ICollection<T> enthalten sind
+
++ `bool IsReadOnly` gibt an, ob das ICollection<T> schreibgeschützt ist
+Methoden
+
++ `void Add(T)` fügt der ICollection<T> ein Element hinzu
++
+`void Clear()` entfernt alle Elemente aus ICollection<T>
+
++ `bool Contains(T)` ermittelt, ob die ICollection<T> einen bestimmten Wert enthält
++ `void CopyTo(T[], Int32)`
+ kopiert die Elemente der ICollection<T> in ein Array, beginnend bei einem bestimmten Array-Index
++ `IEnumerator<T> GetEnumerator()`
+ gibt einen Enumerator zurück, der die Auflistung durchläuft
++ `IEnumerator GetEnumerator()` gibt einen Enumerator zurück, der die Auflistung durchläuft
+
++ `bool Remove(T)` entfernt das erste Vorkommen eines angegebenen Objekts aus der ICollection<T>
+
+
+Verwenden Sie in der Klasse zum Speichern der Elemente ein private-Datenfeld vom Typ `List<T>`, zum Verwalten von Elementen die angegebenen Methoden bzw. weitere sinnvolle Methoden. Nutzen Sie in den Methoden der Klasse die von der Klasse `List` zur Verfügung stehenden Properties und Methoden: `Count`, `Contains`, `Add`, `CopyTo`, `Remove`. Beachten Sie beim Implementieren der Methoden, dass alle Elemente einer Menge unterschiedlich sein müssen.
+
+Für die `GetEnumerator`-Methoden bietet sich die `yield return` - Anweisung an.
+Definieren Sie in der Klasse weitere Properties und Methoden, z.B.:
+`Cardinality`, `IsEmpty`, `SubsetOf()`, `Intersection()`, `Union()`
+Testen Sie die Klasse in der Main-Methode in dem Sie die Mengen mit Elementen unterschiedlicher Datentypen erstellen, z.B. `int` und Stöckchen-Zahlen aus der Aufgabe 4.2.
+
+## 2. Typ constraints
+Die Klasse Set soll so verändert werden, dass sie nur Elemente des Typs aufnehmen kann, der das Interface `ISuitable` implementieren.
+
+Erstellen Sie bitte das Interface `ISuitable` mit der Methode  `bool Suit()`.
+
+Erstellen Sie eine andere Klasse, die das Interface `ISuitable` implementiert oder ergänzen Sie einfach die Stöckchen-Zahlen Klasse um die `ISuitable`- Implementierung.
+
+Die Methode `Suit()` kann z.B. überprüfen, ob die Zahlen eine bestimmte Größe nicht überschreiten. Passen Sie die Methoden der Klasse `Set` so an, dass sie beim Hinzufügen von  Elementen ihre Eignung überprüfen.
+
+
+## 3. Delegaten
 Das E-Orakel von Freiberg soll für ein Fußballspiel folgende Voraussagen treffen können:
 
 +	das Spielergebnis,
@@ -24,7 +69,7 @@ Erstellen Sie für die Methoden einen geeigneten `delegate`-Typ.
 In der Main-Methode sind die drei oben beschriebenen Methoden dem delegate hinzuzufügen und mit verschieden Argumenten auszuführen.
 
 
-## 2. Events
+## 4. Events
 In der digitalisierten Welt funktioniert die Müllentsorgung wie folgt:
 
 Sobald die Mülltonne nicht mehr die zu übernehmende Müllmenge fassen kann, wird ein Event ausgelöst, der das Abtransportieren des Mülls mit einem Müllfahrzeug zufolge hat. Die Tonne wird geleert (der Füllstand der Tonne auf 0 gesetzt) und der Müll wird aus der Tonne in das Fahrzeug übertragen.
